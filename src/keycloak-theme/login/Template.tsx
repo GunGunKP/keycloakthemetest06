@@ -39,7 +39,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
             `${url.resourcesCommonPath}/node_modules/patternfly/dist/css/patternfly-additions.min.css`,
             `${url.resourcesCommonPath}/lib/zocial/zocial.css`,
             `${url.resourcesPath}/css/login.css`,
-            `${url.resourcesPath}/css/materialize.min.css`
+            `${url.resourcesCommonPath}/lib/zocial/materialize.min.css`
         ],
         "htmlClassName": getClassName("kcHtmlClass"),
         "bodyClassName": getClassName("kcBodyClass")
