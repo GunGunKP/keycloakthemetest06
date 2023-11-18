@@ -50,39 +50,12 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     }
 
     return (
-        <div className="container_12">
-             <div className="grid_4 suffix_8">
-                <a className="logo"></a>
-            </div>
         
-          <div className="box clear-float" >
-            <div className="grid_3">
-                <div className="product-logo"></div>
-            </div>
-            <div className="grid_9 left-seperator">
-                <div className="box-content clear-float">
-                <div className="row">
-                {/*------------------- TOP LOGO ------------------*/}
-                <div className="col  s12 right-align">
-	                {/*<span class="chip" style="border: #666666 1px solid; background-color: #F9F9F9; color: #666666">TH/EN</span>*/}&nbsp;
-                </div>
-            <div className="col s12" >
-		        <div className="col m1 l3 hide-on-small-only">
-			        &nbsp;
-		        </div>
-		        <div className="center-align col s12 m10 l6" >
-					<img src="https://nidp.su.ac.th/nidp/SU2/sulogo.svg" style={{width: "20%"}}/>
-                    <br/>
-					<h2 className="su_greentext" style={{color: "#00cb90",marginTop: "5px",marginBottom: "0px",fontSize:"5rem"}}>
-                        <b>SU-NET</b>
-                    </h2>
-					<h5 className="grey-text text-lighten-2" >Single Sign On (SSO)</h5>
-					<br/>
-				</div>
-		        <div className="col m1 l3 hide-on-small-only">
-			        &nbsp;
-		        </div>
-	        </div>
+          
+        
+          
+                
+                
 
             <div>
                 <header className={getClassName("kcFormHeaderClass")} > 
@@ -164,7 +137,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     )*/}
                 </header>
                 <div id="kc-content">
-                    <div id="kc-content-wrapper">
+                    <div id="kc-content-wrapper" style={{height:"65rem"}}>
                         {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
                         {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
                             <div className={clsx("alert", `alert-${message.type}`)}>
@@ -175,7 +148,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 <span
                                     className="kc-feedback-text"
                                     dangerouslySetInnerHTML={{
-                                        "__html": message.summary
+                                        "__html": "message.summary"
                                     }}
                                 />
                             </div>
@@ -221,20 +194,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </div>
             </div>
 
-            <div className="footer alt-color" style={{display: "flex",justifyContent: "center"}}>
-            <div className="grid_7 suffix_3">
-                <p className="grey-text center-align" style={{fontSize: "0.8em"}}>
-                    สำนักดิจิทัลเทคโนโลยี  มหาวิทยาลัยศิลปากร
-                    <br/>
-                    Bureau of Digital Technology, Silpakorn University
-                    </p>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
+           
+           
         
-        </div>
+        
     );
 }

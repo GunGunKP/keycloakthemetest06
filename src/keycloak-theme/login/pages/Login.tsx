@@ -67,30 +67,48 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
             }
         >
 
+<div style={{height:"100%"}}>
+<div className="container_12">
+        <div className="grid_4 suffix_8">
+            <a className="logo"></a>
+        </div>
+        <div className="box clear-float">
+            <div className="grid_3">
+                <div className="product-logo"></div>
+            </div>
+            <div className="grid_9 left-seperator">
+                <div className="box-content clear-float">
+
+	
+
+
+
+
+           
+               
+                    {realm.password && (
+                        <form  className="form-signin" onSubmit={onSubmit} action={url.loginAction} method="post">
+                            <div className="row">
+                            
 <div className="col  s12 right-align">
 	&nbsp;
 </div>
 
-	
-
-				
-
-
-
-
-
-
-            <div id="kc-form" className={clsx(realm.password && social.providers !== undefined && getClassName("kcContentWrapperClass"))}>
-                <div 
-                    id="kc-form-wrapper"
-                    className={clsx(
-                        realm.password &&
-                        social.providers && [getClassName("kcFormSocialAccountContentClass"), getClassName("kcFormSocialAccountClass")]
-                    )}
-                >
-                    {realm.password && (
-                        <form id="kc-form-login" onSubmit={onSubmit} action={url.loginAction} method="post">
-                            <div className="row">
+	<div className="col s12">
+		<div className="col m1 l3 hide-on-small-only">
+			&nbsp;
+		</div>
+		                      <div className="center-align col s12 m10 l6">
+					<img src="./keycloak-resources/resources/img/sulogo.svg" style={{width: "30%"}}/>
+                        <br/>
+					<h2 className="su_greentext" style={{color:"#00cb90",marginTop:"5px",marginBottom:"0px",fontFamily: "Kanit"}}><b>SU-NET</b></h2>
+					<h5 className="grey-text text-lighten-2" style={{fontFamily: "Kanit"}}>Single Sign On (SSO)</h5>
+					<br/>
+				    </div>
+		<div className="col m1 l3 hide-on-small-only">
+			&nbsp;
+		</div>
+	</div>
                             <div className="col m2 l3 hide-on-small-only">&nbsp;</div>
                             <div className={getClassName("kcFormGroupClass")}>
                                 
@@ -122,14 +140,10 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                                     type="text"
                                                     autoFocus={true}
                                                     autoComplete="off"         className="textbox browser-default su_textinput "     style={{paddingLeft: "50px",border: "solid 2px #00cb90",borderRadius: "20px", height: 
-"45px", width: "90%",boxShadow: "1px 2px 2px 2px #ccc", fontSize: "1.5em",color: "#666666",backgroundImage:  "url(&#39;/nidp/SU2/person.png&#39;)",backgroundRepeat:"none", backgroundPosition: "15px 50%", backgroundSize: "25px",maxWidth:"400px"}} placeholder="username/ชื่อผู้ใช้งาน"/>
+"45px", width: "90%",boxShadow: "1px 2px 2px 2px #ccc", fontSize: "1.5em",color: "#666666",backgroundImage:  "url(./keycloak-resources/resources/img/person.png)",backgroundRepeat:"no-repeat", backgroundPosition: "15px 50%", backgroundSize: "25px",maxWidth:"400px"}} placeholder="username/ชื่อผู้ใช้งาน"/>
                                     
                               </div>
-                              <div className="col m2 l3 hide-on-small-only">&nbsp;</div>
-
-<div className="col s12">&nbsp;</div>
-
-<div className="col m2 l3 hide-on-small-only">&nbsp;</div>
+                             
                                             </>
                                         );
                                     })()}
@@ -146,21 +160,25 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                 {/*<label htmlFor="password" className={getClassName("kcLabelClass")}>
                                     {"PASSWORD"}
                                 </label>*/}
-                                <div className="col s12 m8 l6 center-align " style={{padding: "15px",display: "flex",justifyContent: "center",alignItems:"center",flexDirection:"column"}}>
+                                <div className="col s12 m8 l6 center-align " style={{padding: "15px"}}>
                                  
                                  <input  tabIndex={2}
                                    id="password"
                                    
                                    name="password"
                                    type="password"
-                                   autoComplete="off"       className="textbox browser-default su_textinput "   style={{paddingLeft: "50px",border: "solid 2px #00cb90",borderRadius: "20px", height: 
-"45px", width: "90%",boxShadow: "1px 2px 2px 2px #ccc", fontSize: "1.5em",color: "#666666",backgroundImage:  "url(&#39;/nidp/SU2/lock.png&#39;)",backgroundRepeat:"none", backgroundPosition: "15px 50%", backgroundSize: "25px",maxWidth:"400px"}} placeholder="password/รหัสผ่าน"/>
+                                   autoComplete="off"       className="textbox browser-default su_textinput "  style={{paddingLeft: "50px",border: "solid 2px #00cb90",borderRadius: "20px", height: 
+"45px", width: "90%",boxShadow: "1px 2px 2px 2px #ccc", fontSize: "1.5em",color: "#666666",backgroundImage:  "url(./keycloak-resources/resources/img/lock.png)",backgroundRepeat:"no-repeat", backgroundPosition: "15px 50%", backgroundSize: "25px",maxWidth:"400px"}} placeholder="password/รหัสผ่าน"/>
                                  
                              </div>
                              
                              
                             </div>
                             <div className="col m2 l3 hide-on-small-only">&nbsp;</div>
+                            <div className="col  s12" style={{height:"1rem"}}>
+	
+</div>
+     
                             
                             {/*<div className={clsx(getClassName("kcFormGroupClass"), getClassName("kcFormSettingClass"))}>
                                 <div id="kc-form-options">
@@ -199,7 +217,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
 	</div>
                             {/*<div id="kc-form-buttons" className={getClassName("kcFormGroupClass")}>*/}
 
-                            <div className="col s12 m10 l4 center-align"  style={{marginTop: "20px;",display: "flex",justifyContent: "center",alignItems:"center",flexDirection:"column"}}>
+                            <div className="col s12 m10 l4 center-align"  style={{marginTop: "20px;"}}>
                            
 		                    <button   tabIndex={4}
                                     
@@ -224,7 +242,7 @@ border: "0px",maxWidth:"400px"}}><span className="white-text" style={{fontFamily
                            {/*</div>*/}
                         </form>
                     )}
-                </div>
+                
                 {/*realm.password && social.providers !== undefined && (
                     <div
                         id="kc-social-providers"
@@ -246,6 +264,21 @@ border: "0px",maxWidth:"400px"}}><span className="white-text" style={{fontFamily
                         </ul>
                     </div>
                             )*/}
+            
+            </div>
+            </div>
+            </div>
+            </div>
+</div>
+
+            <div className="footer alt-color" style={{display: "flex",justifyContent: "center"}}>
+            <div className="grid_7 suffix_3">
+                <p className="grey-text center-align" style={{fontSize: "0.8rem"}}>
+                    สำนักดิจิทัลเทคโนโลยี  มหาวิทยาลัยศิลปากร
+                    <br/>
+                    Bureau of Digital Technology, Silpakorn University
+                    </p>
+            </div>
             </div>
         </Template>
     );
